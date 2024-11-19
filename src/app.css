@@ -6,3 +6,9 @@
   background: #252525;
   color: #ffffff;
 }
+
+@layer base {
+  main {
+    @apply flex flex-col w-full items-center gap-5 text-center
+  }
+}

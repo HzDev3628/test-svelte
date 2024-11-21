@@ -1,8 +1,8 @@
 <script lang="ts">
-    import Link from '../components/link.svelte'
-    import { page } from '$app/stores';
+import Link from '../components/link.svelte'
+import { page } from '$app/stores'
 
-    $: postId = $page.params.post;
+$: postId = $page.params.post
 </script>
 
 <h1>There is an ID on this post: {postId}</h1>

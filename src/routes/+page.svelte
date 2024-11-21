@@ -3,20 +3,20 @@
 </svelte:head>
 
 <script lang="ts">
-  import Link from './components/link.svelte'
-  async function getData () {
-    return await fetch('https://jsonplaceholder.typicode.com/posts')
-        .then((res) => res.json())
-        .catch((err) => console.log(err))
-  }
+import Link from './components/link.svelte'
+async function getData() {
+  return await fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => res.json())
+    .catch((err) => console.log(err))
+}
 
-  type Posts = {
-    id: number
-    title: string
-    body: string
-  }[]
+type Posts = {
+  id: number
+  title: string
+  body: string
+}[]
 
-  const data = getData() as Promise<Posts>
+const data = getData() as Promise<Posts>
 </script>
 
 
